@@ -13,7 +13,6 @@ $ npm install --save builder @walmart/electrode-archetype-hapi-plugin
 $ npm install --save-dev @walmart/electrode-archetype-hapi-plugin-dev
 ```
 
-
 Add a `.builderrc` that contains the following:
 
 ```yaml
@@ -72,6 +71,5 @@ Tasks:
   test
     [@walmart/electrode-archetype-hapi-plugin] mocha test/*
 ```
-
 
 [builder]: https://github.com/FormidableLabs/builder
