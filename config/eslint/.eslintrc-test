@@ -1,5 +1,6 @@
 ---
 extends:
+  - "eslint-config-defaults/configurations/walmart/es6-node"
   - "eslint-config-defaults/configurations/walmart/es6-test"
 
 globals:
