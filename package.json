@@ -1,0 +1,26 @@
+{
+  "name": "@walmart/electrode-archetype-hapi-plugin",
+  "version": "1.0.0",
+  "description": "Builder Archetype - Hapi Plugin",
+  "scripts": {
+    "lint-src": "eslint --ext .js -c ./node_modules/@walmart/electrode-archetype-hapi-plugin/config/eslint/.eslintrc-node src test --color",
+    "lint-test": "eslint --ext .js -c ./node_modules/@walmart/electrode-archetype-hapi-plugin/config/eslint/.eslintrc-test test --color",
+    "lint": "builder concurrent lint-src lint-test",
+    "test": "mocha test/*",
+    "cov": "istanbul cover mocha test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gecgithub01.walmart.com:electrode/electrode-archetype-hapi-plugin.git"
+  },
+  "author": "Chase Adams",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.4.1",
+    "eslint": "^1.10.3",
+    "eslint-config-defaults": "^8.0.1",
+    "eslint-plugin-filenames": "^0.2.0",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.3.4"
+  }
+}
