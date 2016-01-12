@@ -11,6 +11,9 @@
     "test-ci": "builder run test-cov",
     "check": "builder run lint && builder run test-cov",
     "check-ci": "builder run lint && builder run test-ci",
+    "builder:lint-server": "eslint --color -c config/eslint/.eslintrc-test config/test",
+    "builder:lint": "npm run builder:lint-server",
+    "builder:check": "npm run builder:lint",
     "builder:prepublish": "builder-support gen-dev"
   },
   "repository": {
@@ -21,6 +24,9 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "builder-support": "0.0.1"
+    "builder-support": "0.0.1",
+    "eslint": "^1.10.1",
+    "eslint-config-defaults": "^7.0.1",
+    "eslint-plugin-filenames": "^0.1.2"
   }
 }
