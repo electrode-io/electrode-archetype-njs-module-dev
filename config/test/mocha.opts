@@ -1,0 +1,2 @@
+--require node_modules/@walmart/electrode-archetype-hapi-plugin/config/test/setup.js
+--recursive
