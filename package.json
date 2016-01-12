@@ -7,7 +7,8 @@
     "lint-test": "eslint --ext .js -c ./node_modules/@walmart/electrode-archetype-hapi-plugin/config/eslint/.eslintrc-test test --color",
     "lint": "builder concurrent lint-src lint-test",
     "test": "mocha test/*",
-    "cov": "istanbul cover mocha test/*"
+    "cov": "istanbul cover mocha test/*",
+    "builder:prepublish": "builder-support gen-dev"
   },
   "repository": {
     "type": "git",
@@ -16,11 +17,8 @@
   "author": "Chase Adams",
   "license": "MIT",
   "dependencies": {
-    "chai": "^3.4.1",
-    "eslint": "^1.10.3",
-    "eslint-config-defaults": "^8.0.1",
-    "eslint-plugin-filenames": "^0.2.0",
-    "istanbul": "^0.4.2",
-    "mocha": "^2.3.4"
+  },
+  "devDependencies": {
+    "builder-support": "0.0.1"
   }
 }
