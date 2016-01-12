@@ -26,19 +26,23 @@ archetypes:
 This archetype assumes an architecture as follows:
 
 ```
-src/
-  index.js
 .builderrc
 .npmrc
 .gitignore
-test/
 package.json
+
+src/
+  index.js
+
+test/
+  spec/**
+    *.spec.js
 ```
 
 ## Tasks
 
 ```
-$ builder help electrode-archetype-hapi-plugin
+$ builder help @walmart/electrode-archetype-hapi-plugin
 
 [builder:help]
 
@@ -56,20 +60,29 @@ Flags: General
 
 Tasks:
 
-  cov
-    [@walmart/electrode-archetype-hapi-plugin] istanbul cover mocha test/*
+  check
+    [@walmart/electrode-archetype-hapi-plugin] builder run lint && builder run test-cov
+
+  check-ci
+    [@walmart/electrode-archetype-hapi-plugin] builder run lint && builder run test-ci
 
   lint
     [@walmart/electrode-archetype-hapi-plugin] builder concurrent lint-src lint-test
 
   lint-src
-    [@walmart/electrode-archetype-hapi-plugin] eslint --ext .js -c ./node_modules/@walmart/electrode-archetype-hapi-plugin/config/eslint/.eslintrc-node src test --color
+    [@walmart/electrode-archetype-hapi-plugin] eslint -c node_modules/@walmart/electrode-archetype-hapi-plugin/config/eslint/.eslintrc-node src --color
 
   lint-test
-    [@walmart/electrode-archetype-hapi-plugin] eslint --ext .js -c ./node_modules/@walmart/electrode-archetype-hapi-plugin/config/eslint/.eslintrc-test test --color
+    [@walmart/electrode-archetype-hapi-plugin] eslint -c node_modules/@walmart/electrode-archetype-hapi-plugin/config/eslint/.eslintrc-test test --color
 
   test
-    [@walmart/electrode-archetype-hapi-plugin] mocha test/*
+    [@walmart/electrode-archetype-hapi-plugin] mocha -c --opts node_modules/@walmart/electrode-archetype-hapi-plugin/config/test/mocha.opts test/spec
+
+  test-ci
+    [@walmart/electrode-archetype-hapi-plugin] builder run test-cov
+
+  test-cov
+    [@walmart/electrode-archetype-hapi-plugin] istanbul cover mocha -- -c --opts node_modules/@walmart/electrode-archetype-hapi-plugin/config/test/mocha.opts test/spec
 ```
 
 [builder]: https://github.com/FormidableLabs/builder
