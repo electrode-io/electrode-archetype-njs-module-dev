@@ -7,7 +7,7 @@
     "lint-test": "eslint -c node_modules/@walmart/electrode-archetype-hapi-plugin/config/eslint/.eslintrc-test test --color",
     "lint": "builder concurrent lint-src lint-test",
     "test": "mocha -c --opts node_modules/@walmart/electrode-archetype-hapi-plugin/config/test/mocha.opts test/spec",
-    "test-cov": "istanbul cover mocha -- -c --opts node_modules/@walmart/electrode-archetype-hapi-plugin/config/test/mocha.opts test/spec",
+    "test-cov": "istanbul cover _mocha -- -c --opts node_modules/@walmart/electrode-archetype-hapi-plugin/config/test/mocha.opts test/spec",
     "test-ci": "builder run test-cov",
     "check": "builder run lint && builder run test-cov",
     "check-ci": "builder run lint && builder run test-ci",

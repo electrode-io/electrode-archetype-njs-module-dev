@@ -44,8 +44,6 @@ test/
 ```
 $ builder help @walmart/electrode-archetype-hapi-plugin
 
-[builder:help]
-
 Usage:
 
   builder <action> <task(s)>
@@ -82,7 +80,7 @@ Tasks:
     [@walmart/electrode-archetype-hapi-plugin] builder run test-cov
 
   test-cov
-    [@walmart/electrode-archetype-hapi-plugin] istanbul cover mocha -- -c --opts node_modules/@walmart/electrode-archetype-hapi-plugin/config/test/mocha.opts test/spec
+    [@walmart/electrode-archetype-hapi-plugin] istanbul cover _mocha -- -c --opts node_modules/@walmart/electrode-archetype-hapi-plugin/config/test/mocha.opts test/spec
 ```
 
 [builder]: https://github.com/FormidableLabs/builder
