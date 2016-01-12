@@ -4,11 +4,13 @@ A Walmart Labs flavored Hapi Plugin archetype for [builder][].
 
 ## Installation
 
-If you want to use `builder` as a CLI tool (recommended), follow the instructions at [formidablelabs/builder to modify your `PATH`](https://github.com/formidablelabs/builder#local-install)
+If you want to use `builder` as a CLI tool (recommended), follow the
+instructions at
+[formidablelabs/builder to modify your `PATH`](https://github.com/formidablelabs/builder#local-install)
 
 Within your project, run:
 
-```bash
+```sh
 $ npm install --save builder @walmart/electrode-archetype-hapi-plugin
 $ npm install --save-dev @walmart/electrode-archetype-hapi-plugin-dev
 ```
@@ -31,7 +33,7 @@ This archetype assumes an architecture as follows:
 .gitignore
 package.json
 
-src/
+lib/
   index.js
 
 test/
@@ -65,10 +67,10 @@ Tasks:
     [@walmart/electrode-archetype-hapi-plugin] builder run lint && builder run test-ci
 
   lint
-    [@walmart/electrode-archetype-hapi-plugin] builder concurrent lint-src lint-test
+    [@walmart/electrode-archetype-hapi-plugin] builder concurrent lint-lib lint-test
 
-  lint-src
-    [@walmart/electrode-archetype-hapi-plugin] eslint -c node_modules/@walmart/electrode-archetype-hapi-plugin/config/eslint/.eslintrc-node src --color
+  lint-lib
+    [@walmart/electrode-archetype-hapi-plugin] eslint -c node_modules/@walmart/electrode-archetype-hapi-plugin/config/eslint/.eslintrc-node lib --color
 
   lint-test
     [@walmart/electrode-archetype-hapi-plugin] eslint -c node_modules/@walmart/electrode-archetype-hapi-plugin/config/eslint/.eslintrc-test test --color
