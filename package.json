@@ -1,6 +1,6 @@
 {
   "name": "@walmart/electrode-archetype-hapi-plugin",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Builder Archetype - Hapi Plugin",
   "scripts": {
     "lint-lib": "eslint -c node_modules/@walmart/electrode-archetype-hapi-plugin/config/eslint/.eslintrc-node lib --color",
