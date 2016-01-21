@@ -1,18 +1,16 @@
-# Builder Archetype: Hapi Plugin
+# Builder Archetype: Hapi Plugin (Development)
 
 A Walmart Labs flavored Hapi Plugin archetype for [builder][].
 
 ## Installation
 
-If you want to use `builder` as a CLI tool (recommended), follow the
-instructions at
+If you want to use `builder` as a CLI tool (recommended), follow the instructions at
 [formidablelabs/builder to modify your `PATH`](https://github.com/formidablelabs/builder#local-install)
 
 Within your project, run:
 
 ```sh
-$ npm install --save builder @walmart/electrode-archetype-hapi-plugin
-$ npm install --save-dev @walmart/electrode-archetype-hapi-plugin-dev
+$ npm install --save-dev builder @walmart/electrode-archetype-hapi-plugin-dev
 ```
 
 Add a `.builderrc` that contains the following:
@@ -20,7 +18,7 @@ Add a `.builderrc` that contains the following:
 ```yaml
 ---
 archetypes:
-  - "@walmart/electrode-archetype-hapi-plugin"
+  - "@walmart/electrode-archetype-hapi-plugin-dev"
 ```
 
 ## Project Structure
@@ -44,7 +42,7 @@ test/
 ## Tasks
 
 ```
-$ builder help @walmart/electrode-archetype-hapi-plugin
+$ builder help 
 
 Usage:
 
@@ -86,3 +84,4 @@ Tasks:
 ```
 
 [builder]: https://github.com/FormidableLabs/builder
+
