@@ -1,7 +1,7 @@
 {
-  "name": "@walmart/electrode-archetype-hapi-plugin",
+  "name": "@walmart/electrode-archetype-hapi-plugin-dev",
   "version": "1.1.1",
-  "description": "Builder Archetype - Hapi Plugin",
+  "description": "Builder Archetype - Hapi Plugin (Development)",
   "scripts": {
     "lint-lib": "eslint -c node_modules/@walmart/electrode-archetype-hapi-plugin/config/eslint/.eslintrc-node lib --color",
     "lint-test": "eslint -c node_modules/@walmart/electrode-archetype-hapi-plugin/config/eslint/.eslintrc-test test --color",
@@ -23,11 +23,17 @@
   },
   "author": "Chase Adams",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "chai": "^3.4.1",
+    "eslint": "^1.10.3",
+    "eslint-config-defaults": "^8.0.1",
+    "eslint-plugin-filenames": "^0.2.0",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0"
+  },
   "devDependencies": {
-    "builder-support": "0.0.1",
-    "eslint": "^1.10.1",
-    "eslint-config-defaults": "^7.0.1",
-    "eslint-plugin-filenames": "^0.1.2"
+    "builder-support": "0.0.1"
   }
 }
