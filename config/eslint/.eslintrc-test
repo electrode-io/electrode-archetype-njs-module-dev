@@ -20,6 +20,8 @@ rules:
     - declaration
   "object-shorthand":
     - 0
+  "no-magic-numbers":
+    - 0
 
 env:
   mocha: true
