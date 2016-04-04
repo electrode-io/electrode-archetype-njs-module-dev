@@ -8,7 +8,7 @@
     "lint": "builder concurrent lint-lib lint-test",
     "test": "builder concurrent lint-lib lint-test test-only",
     "test-only": "mocha -c --opts node_modules/@walmart/electrode-archetype-hapi-plugin-dev/config/test/mocha.opts test/spec",
-    "test-cov": "istanbul cover _mocha -- -c --opts node_modules/@walmart/electrode-archetype-hapi-plugin-dev/config/test/mocha.opts test/spec",
+    "test-cov": "istanbul cover --include-all-sources _mocha -- -c --opts node_modules/@walmart/electrode-archetype-hapi-plugin-dev/config/test/mocha.opts test/spec",
     "test-ci": "builder run test-cov",
     "check": "builder run lint && builder run test-cov",
     "check-ci": "builder run lint && builder run test-ci",
