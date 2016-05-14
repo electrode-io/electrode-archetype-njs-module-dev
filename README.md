@@ -1,6 +1,6 @@
-# Builder Archetype: Hapi Plugin (Development)
+# Builder Archetype: NodeJS Module (Development)
 
-A Walmart Labs flavored Hapi Plugin archetype for [builder][].
+A Walmart Labs flavored NodeJS Module archetype for [builder][].
 
 ## Installation
 
@@ -10,7 +10,7 @@ If you want to use `builder` as a CLI tool (recommended), follow the instruction
 Within your project, run:
 
 ```sh
-$ npm install --save-dev builder @walmart/electrode-archetype-hapi-plugin-dev
+$ npm install --save-dev builder @walmart/electrode-archetype-njs-module-dev
 ```
 
 Add a `.builderrc` that contains the following:
@@ -18,7 +18,7 @@ Add a `.builderrc` that contains the following:
 ```yaml
 ---
 archetypes:
-  - "@walmart/electrode-archetype-hapi-plugin-dev"
+  - "@walmart/electrode-archetype-njs-module-dev"
 ```
 
 ## Project Structure
@@ -59,28 +59,28 @@ Flags: General
 Tasks:
 
   check
-    [@walmart/electrode-archetype-hapi-plugin-dev] builder run lint && builder run test-cov
+    [@walmart/electrode-archetype-njs-module-dev] builder run lint && builder run test-cov
 
   check-ci
-    [@walmart/electrode-archetype-hapi-plugin-dev] builder run lint && builder run test-ci
+    [@walmart/electrode-archetype-njs-module-dev] builder run lint && builder run test-ci
 
   lint
-    [@walmart/electrode-archetype-hapi-plugin-dev] builder concurrent lint-lib lint-test
+    [@walmart/electrode-archetype-njs-module-dev] builder concurrent lint-lib lint-test
 
   lint-lib
-    [@walmart/electrode-archetype-hapi-plugin-dev] eslint -c node_modules/@walmart/electrode-archetype-hapi-plugin-dev/config/eslint/.eslintrc-node lib --color
+    [@walmart/electrode-archetype-njs-module-dev] eslint -c node_modules/@walmart/electrode-archetype-njs-module-dev/config/eslint/.eslintrc-node lib --color
 
   lint-test
-    [@walmart/electrode-archetype-hapi-plugin-dev] eslint -c node_modules/@walmart/electrode-archetype-hapi-plugin-dev/config/eslint/.eslintrc-test test --color
+    [@walmart/electrode-archetype-njs-module-dev] eslint -c node_modules/@walmart/electrode-archetype-njs-module-dev/config/eslint/.eslintrc-test test --color
 
   test
-    [@walmart/electrode-archetype-hapi-plugin-dev] mocha -c --opts node_modules/@walmart/electrode-archetype-hapi-plugin-dev/config/test/mocha.opts test/spec
+    [@walmart/electrode-archetype-njs-module-dev] mocha -c --opts node_modules/@walmart/electrode-archetype-njs-module-dev/config/test/mocha.opts test/spec
 
   test-ci
-    [@walmart/electrode-archetype-hapi-plugin-dev] builder run test-cov
+    [@walmart/electrode-archetype-njs-module-dev] builder run test-cov
 
   test-cov
-    [@walmart/electrode-archetype-hapi-plugin-dev] istanbul cover _mocha -- -c --opts node_modules/@walmart/electrode-archetype-hapi-plugin-dev/config/test/mocha.opts test/spec
+    [@walmart/electrode-archetype-njs-module-dev] istanbul cover _mocha -- -c --opts node_modules/@walmart/electrode-archetype-njs-module-dev/config/test/mocha.opts test/spec
 ```
 
 [builder]: https://github.com/FormidableLabs/builder

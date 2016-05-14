@@ -1,14 +1,14 @@
 {
-  "name": "@walmart/electrode-archetype-hapi-plugin-dev",
-  "version": "2.1.0",
-  "description": "Builder Archetype - Hapi Plugin (Development)",
+  "name": "@walmart/electrode-archetype-njs-module-dev",
+  "version": "1.0.0",
+  "description": "Builder Archetype for NodeJS Module (Development)",
   "scripts": {
-    "lint-lib": "eslint -c node_modules/@walmart/electrode-archetype-hapi-plugin-dev/config/eslint/.eslintrc-node lib --color",
-    "lint-test": "eslint -c node_modules/@walmart/electrode-archetype-hapi-plugin-dev/config/eslint/.eslintrc-test test --color",
+    "lint-lib": "eslint -c node_modules/@walmart/electrode-archetype-njs-module-dev/config/eslint/.eslintrc-node lib --color",
+    "lint-test": "eslint -c node_modules/@walmart/electrode-archetype-njs-module-dev/config/eslint/.eslintrc-test test --color",
     "lint": "builder concurrent lint-lib lint-test",
     "test": "builder concurrent lint-lib lint-test test-only",
-    "test-only": "mocha -c --opts node_modules/@walmart/electrode-archetype-hapi-plugin-dev/config/test/mocha.opts test/spec",
-    "test-cov": "istanbul cover --include-all-sources _mocha -- -c --opts node_modules/@walmart/electrode-archetype-hapi-plugin-dev/config/test/mocha.opts test/spec",
+    "test-only": "mocha -c --opts node_modules/@walmart/electrode-archetype-njs-module-dev/config/test/mocha.opts test/spec",
+    "test-cov": "istanbul cover --include-all-sources _mocha -- -c --opts node_modules/@walmart/electrode-archetype-njs-module-dev/config/test/mocha.opts test/spec",
     "test-ci": "builder run test-cov",
     "check": "builder run lint && builder run test-cov",
     "check-ci": "builder run lint && builder run test-ci",
@@ -19,16 +19,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gecgithub01.walmart.com:electrode/electrode-archetype-hapi-plugin-dev.git"
+    "url": "git@gecgithub01.walmart.com:electrode/electrode-archetype-njs-module-dev.git"
   },
   "author": "Chase Adams",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "dependencies": {
     "chai": "^3.4.1",
     "eslint": "^1.10.3",
     "eslint-config-defaults": "^8.0.1",
     "eslint-plugin-filenames": "^0.2.0",
     "istanbul": "^0.4.2",
+    "bluebird": "^2.0.0",
     "mocha": "^2.3.4",
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0"
