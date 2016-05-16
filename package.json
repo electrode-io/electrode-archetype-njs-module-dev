@@ -1,6 +1,6 @@
 {
   "name": "@walmart/electrode-archetype-njs-module-dev",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Builder Archetype for NodeJS Module (Development)",
   "scripts": {
     "lint-lib": "eslint -c node_modules/@walmart/electrode-archetype-njs-module-dev/config/eslint/.eslintrc-node lib --color",
