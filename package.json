@@ -1,32 +1,18 @@
 {
-  "name": "@walmart/electrode-archetype-njs-module-dev",
+  "name": "electrode-archetype-njs-module-dev",
   "version": "1.0.1",
   "main": "arch-gulpfile.js",
-  "description": "Builder Archetype for NodeJS Module (Development)",
-  "scripts": {
-    "lint-lib": "eslint -c node_modules/@walmart/electrode-archetype-njs-module-dev/config/eslint/.eslintrc-node lib --color",
-    "lint-test": "eslint -c node_modules/@walmart/electrode-archetype-njs-module-dev/config/eslint/.eslintrc-test test --color",
-    "lint": "builder concurrent lint-lib lint-test",
-    "test": "builder concurrent lint-lib lint-test test-only",
-    "test-only": "mocha -c --opts node_modules/@walmart/electrode-archetype-njs-module-dev/config/test/mocha.opts test/spec",
-    "test-cov": "istanbul cover --include-all-sources _mocha -- -c --opts node_modules/@walmart/electrode-archetype-njs-module-dev/config/test/mocha.opts test/spec",
-    "test-ci": "builder run test-cov",
-    "check": "builder run lint && builder run test-cov",
-    "check-ci": "builder run lint && builder run test-ci",
-    "builder:lint-server": "eslint --color -c config/eslint/.eslintrc-test config/test",
-    "builder:lint": "npm run builder:lint-server",
-    "builder:check": "npm run builder:lint",
-    "builder:prepublish": "builder-support gen-dev"
-  },
+  "description": "Archetype for NodeJS Module (Development)",
+  "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git@gecgithub01.walmart.com:electrode/electrode-archetype-njs-module-dev.git"
+    "url": "https://github.com/electrode-io/electrode-archetype-njs-module-dev.git"
   },
   "author": "Chase Adams",
-  "license": "UNLICENSED",
+  "license": "Apache-2.0",
   "dependencies": {
-    "@walmart/electrode-gulp-load-tasks": "^0.1.3",
     "chai": "^3.4.1",
+    "electrode-gulp-helper": "^1.0.3",
     "eslint": "^1.10.3",
     "eslint-config-defaults": "^8.0.1",
     "eslint-plugin-filenames": "^0.2.0",
@@ -37,8 +23,5 @@
   },
   "optionalDependencies": {
     "gulp": "^3.9.1"
-  },
-  "devDependencies": {
-    "builder-support": "0.0.1"
   }
 }
