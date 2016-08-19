@@ -17,7 +17,7 @@
     "eslint-config-defaults": "^8.0.1",
     "eslint-plugin-filenames": "^0.2.0",
     "istanbul": "^0.4.2",
-    "mocha": "^2.3.4",
+    "mocha": "^3.0.0",
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0"
   },
