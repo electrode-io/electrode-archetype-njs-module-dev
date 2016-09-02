@@ -1,15 +1,26 @@
 "use strict";
 const Path = require("path");
 const gulpHelper = require("electrode-gulp-helper");
+const fs = require("fs");
 
 function setupPath() {
   gulpHelper.envPath.addToFront(Path.resolve("node_modules/.bin"));
   gulpHelper.envPath.addToFront(Path.join(__dirname, "node_modules/.bin"));
 }
 
+let eslintDir =  `${__dirname}/config/eslint`;
+function checkCustomEslint() {
+  const customDir = Path.resolve("eslint");
+  if (fs.existsSync(customDir)) {
+    eslintDir = customDir;
+  }
+}
+
+checkCustomEslint();
+
 const tasks = {
-  "lint-lib": `eslint -c ${__dirname}/config/eslint/.eslintrc-node lib --color`,
-  "lint-test": `eslint -c ${__dirname}/config/eslint/.eslintrc-test test --color`,
+  "lint-lib": `eslint -c ${eslintDir}/.eslintrc-node lib --color`,
+  "lint-test": `eslint -c ${eslintDir}/.eslintrc-test test --color`,
   "lint": [["lint-lib", "lint-test"]],
   "test": [["lint-lib", "lint-test", "test-only"]],
   "test-only": `mocha -c --opts ${__dirname}/config/test/mocha.opts test/spec`,
