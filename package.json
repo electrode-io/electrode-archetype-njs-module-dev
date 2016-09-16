@@ -1,6 +1,6 @@
 {
   "name": "electrode-archetype-njs-module-dev",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "arch-gulpfile.js",
   "description": "Archetype for NodeJS Module (Development)",
   "scripts": {},
