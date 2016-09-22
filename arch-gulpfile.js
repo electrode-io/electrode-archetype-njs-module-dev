@@ -24,7 +24,7 @@ const tasks = {
   "lint": [["lint-lib", "lint-test"]],
   "test": [["lint-lib", "lint-test", "test-only"]],
   "test-only": `mocha -c --opts ${__dirname}/config/test/mocha.opts test/spec`,
-  "test-cov": `istanbul cover -x gulpfile.js -x **/dist/** --include-all-sources _mocha -- -c --opts ${__dirname}/config/test/mocha.opts test/spec`,
+  "test-cov": `istanbul cover -x gulpfile.js -x dist/** --include-all-sources _mocha -- -c --opts ${__dirname}/config/test/mocha.opts test/spec`,
   "test-ci": ["test-cov"],
   "check": ["lint", "test-cov"],
   "check-ci": ["lint", "test-ci"]
