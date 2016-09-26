@@ -40,4 +40,4 @@ test/
     *.spec.js
 ```
 
-
+Built with :heart: by [Team Electrode](https://github.com/orgs/electrode-io/people) @WalmartLabs.
