@@ -8,7 +8,7 @@ function setupPath() {
   gulpHelper.envPath.addToFront(Path.join(__dirname, "node_modules/.bin"));
 }
 
-let eslintDir =  `${__dirname}/config/eslint`;
+let eslintDir = `${__dirname}/config/eslint`;
 function checkCustomEslint() {
   const customDir = Path.resolve("eslint");
   if (fs.existsSync(customDir)) {
@@ -32,6 +32,6 @@ const tasks = {
 
 module.exports = function (gulp) {
   setupPath();
+  process.env.FORCE_COLOR = "true";
   gulpHelper.loadTasks(tasks, gulp || require("gulp"));
 };
-

@@ -1,8 +1,10 @@
 ---
 extends:
-  - "eslint-config-defaults/configurations/walmart/es6-node"
+  - "walmart/configurations/es6-node"
+
 ecmaFeatures:
   modules: false
+
 rules:
   "func-style":
     - 0
