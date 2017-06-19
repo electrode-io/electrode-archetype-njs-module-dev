@@ -1,7 +1,7 @@
 {
   "name": "electrode-archetype-njs-module-dev",
   "version": "2.0.0",
-  "main": "arch-gulpfile.js",
+  "main": "arch-clap.js",
   "description": "Archetype for NodeJS Module (Development)",
   "scripts": {},
   "repository": {
@@ -13,16 +13,15 @@
   "dependencies": {
     "babel-eslint": "^7.1.1",
     "chai": "^3.4.1",
-    "electrode-gulp-helper": "^1.0.3",
     "eslint": "^3.17.1",
     "eslint-config-walmart": "^1.1.1",
     "eslint-plugin-filenames": "^1.1.0",
-    "istanbul": "^0.4.2",
     "mocha": "^3.0.0",
+    "nyc": "^11.0.2",
     "sinon": "^1.17.2",
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "xclap": "^0.2.0",
+    "xsh": "^0.3.2"
   },
-  "optionalDependencies": {
-    "gulp": "^3.9.1"
-  }
+  "optionalDependencies": {}
 }
