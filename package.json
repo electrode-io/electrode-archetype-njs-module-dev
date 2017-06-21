@@ -23,5 +23,20 @@
     "xclap": "^0.2.0",
     "xsh": "^0.3.2"
   },
-  "optionalDependencies": {}
+  "optionalDependencies": {},
+  "nyc": {
+    "all": true,
+    "reporter": [
+      "lcov",
+      "text",
+      "text-summary"
+    ],
+    "exclude": [
+      "coverage",
+      "*clap.js",
+      "gulpfile.js",
+      "dist",
+      "test"
+    ]
+  }
 }
