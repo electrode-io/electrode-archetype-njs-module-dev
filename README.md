@@ -10,7 +10,7 @@ Within your project, run:
 $ npm install --save-dev electrode-archetype-njs-module-dev
 ```
 
-Add a `clap.js` with the following code:
+Add a `xclap.js` with the following code:
 
 ```js
 require("electrode-archetype-njs-module-dev")();
