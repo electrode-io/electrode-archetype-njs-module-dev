@@ -1,9 +1,11 @@
 ---
 extends:
   - "walmart/configurations/es6-node"
+  - "prettier"
 
-ecmaFeatures:
-  modules: false
+parserOptions:
+  ecmaFeatures:
+    modules: false
 
 rules:
   "func-style":

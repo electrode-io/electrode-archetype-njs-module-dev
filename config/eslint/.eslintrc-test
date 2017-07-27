@@ -2,11 +2,13 @@
 extends:
   - "walmart/configurations/es6-node"
   - "walmart/configurations/es6-test"
+  - "prettier"
 
 # Turning off modules so that we can use `"use strict";` in tests for things
 # like scoped `let`, etc.
-ecmaFeatures:
-  modules: false
+parserOptions:
+  ecmaFeatures:
+    modules: false
 
 globals:
   expect: false
