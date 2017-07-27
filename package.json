@@ -1,6 +1,6 @@
 {
   "name": "electrode-archetype-njs-module-dev",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "main": "arch-clap.js",
   "description": "Archetype for NodeJS Module (Development)",
   "scripts": {},
