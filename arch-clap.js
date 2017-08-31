@@ -70,6 +70,14 @@ const tasks = {
       if (nyc.exclude.indexOf("*clap.js") < 0) {
         userPkg.nyc = nyc;
         nyc.all = true;
+        Object.assign(nyc, {
+          "check-coverage": true,
+          statements: 100,
+          branches: 100,
+          functions: 100,
+          lines: 100,
+          cache: true
+        });
         nyc.reporter = nyc.reporter.concat(["lcov", "text", "text-summary"]);
         nyc.exclude = nyc.exclude.concat(["coverage", "*clap.js", "gulpfile.js", "dist", "test"]);
         Fs.writeFileSync(userPkgFile, `${JSON.stringify(userPkg, null, 2)}\n`);
