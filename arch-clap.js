@@ -3,6 +3,23 @@ const Path = require("path");
 const xsh = require("xsh");
 const Fs = require("fs");
 
+
+const checkNodeVersion = () => {
+
+  import { engines } from "./package";
+  console.log(engines);
+  if (engines && engines.node) {
+    const semver = require("semver");
+    let version = engines.node;
+    if (!semver.satisfies(process.version,version)) {
+      console.log('\nRequired node version '.concat(version).concat(' not satisfied with current version ').concat(process.version));
+      process.exit(1);
+    }
+  }
+};
+
+checkNodeVersion();
+
 if (process.argv[1].indexOf("gulp") >= 0) {
   const cmd = `clap ${process.argv.slice(2).join(" ")}`;
   console.log(`\nPlease use clap to run archetype commands.`);
