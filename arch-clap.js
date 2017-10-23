@@ -6,8 +6,8 @@ const Fs = require("fs");
 
 const checkNodeVersion = () => {
 
-  import { engines } from "./package";
-  console.log(engines);
+  const package = require('./package.json');
+  const engines = package.engines;
   if (engines && engines.node) {
     const semver = require("semver");
     let version = engines.node;
