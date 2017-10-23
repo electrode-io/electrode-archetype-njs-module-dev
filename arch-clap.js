@@ -6,8 +6,8 @@ const Fs = require("fs");
 
 const checkNodeVersion = () => {
 
-  const package = require('./package.json');
-  const engines = package.engines;
+  const config = require('./package.json');
+  const engines = config.engines;
   if (engines && engines.node) {
     const semver = require("semver");
     let version = engines.node;
