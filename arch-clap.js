@@ -2,6 +2,7 @@
 const Path = require("path");
 const xsh = require("xsh");
 const Fs = require("fs");
+const unwrapNpmCmd = require("unwrap-npm-cmd");
 
 if (process.argv[1].indexOf("gulp") >= 0) {
   const cmd = `clap ${process.argv.slice(2).join(" ")}`;
@@ -60,7 +61,7 @@ const tasks = {
     }
   },
   ".test-only": `mocha -c test/spec`,
-  ".test-cov": `nyc clap -q test-only`,
+  ".test-cov": `nyc ${unwrapNpmCmd("clap", { jsOnly: true })} -q test-only`,
   "test-cov": {
     desc: "Use nyc to generate coverage for tests (add nyc config to your package.json)",
     task: () => {

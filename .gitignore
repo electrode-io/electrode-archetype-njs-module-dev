@@ -224,3 +224,4 @@ crashlytics-build.properties
 .nyc_output
 test/mocha.opts
 
+*-lock.*

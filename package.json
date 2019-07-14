@@ -10,6 +10,10 @@
   },
   "author": "Chase Adams",
   "license": "Apache-2.0",
+  "files": [
+    "config",
+    "arch-clap.js"
+  ],
   "dependencies": {
     "babel-eslint": "^7.1.1",
     "chai": "^4.1.2",
@@ -20,6 +24,7 @@
     "nyc": "^11.2.1",
     "sinon": "^4.0.1",
     "sinon-chai": "^2.14.0",
+    "unwrap-npm-cmd": "^1.1.0",
     "xclap": "^0.2.0",
     "xsh": "^0.3.2"
   },
