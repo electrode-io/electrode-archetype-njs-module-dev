@@ -25,7 +25,7 @@
     "sinon": "^4.0.1",
     "sinon-chai": "^2.14.0",
     "unwrap-npm-cmd": "^1.1.0",
-    "xclap": "^0.2.0",
+    "xclap": "^0.2.34",
     "xsh": "^0.3.2"
   },
   "optionalDependencies": {},
