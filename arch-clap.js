@@ -39,7 +39,9 @@ const setupMocha = () => {
   const setupFile = Path.join(archDir, "config/test/setup.js");
 
   const mochaOpts = `--require ${setupFile}
+--require ts-node/register
 --recursive
+--extension js,ts
 `;
 
   Fs.writeFileSync(userFile, mochaOpts);
