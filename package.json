@@ -8,6 +8,10 @@
     "type": "git",
     "url": "https://github.com/electrode-io/electrode-archetype-njs-module-dev.git"
   },
+  "publishConfig": {
+    "tag": "v2",
+    "registry": "https://registry.npmjs.org/"
+  },
   "author": "Chase Adams",
   "license": "Apache-2.0",
   "dependencies": {
@@ -20,8 +24,8 @@
     "nyc": "^11.0.2",
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0",
-    "xclap": "^0.2.0",
-    "xsh": "^0.3.2"
+    "xclap": "^0.2.53",
+    "xsh": "^0.4.5"
   },
   "optionalDependencies": {},
   "nyc": {
