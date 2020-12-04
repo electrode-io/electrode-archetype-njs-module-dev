@@ -2,9 +2,6 @@
 extends:
   - "walmart/configurations/es6-node"
 
-ecmaFeatures:
-  modules: false
-
 rules:
   "func-style":
     - 0
